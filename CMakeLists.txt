@@ -25,13 +25,16 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-
+if(NOT TARGET serial)
 file(GLOB serial_src "include/serial/*.cc")
 add_library(serial SHARED ${serial_src})
+endif()
 
+if(NOT TARGET gl_driver)
 add_library(gl_driver
   include/gl_driver.cpp
 )
+endif()
 
 
 add_executable(${PROJECT_NAME}_node
