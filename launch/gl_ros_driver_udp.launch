@@ -4,8 +4,8 @@
         <param name="gl_ip" type="string" value="10.110.1.2"/>
         <param name="gl_port" type="int" value="2000"/>
         <param name="pc_port" type="int" value="3000"/>
-        <param name="frame_id" type="string" value="laser_udp"/>
-        <param name="pub_topicname_lidar" type="string" value="scan_udp"/>
+        <param name="frame_id" type="string" value="laser"/>
+        <param name="pub_topicname_lidar" type="string" value="scan"/>
     </node>
 </launch>
 
