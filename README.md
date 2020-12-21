@@ -4,23 +4,28 @@
 * Installation
 ```
 $ cd ${ROS workspace}/src
-$ git clone https://github.com/soslab-project/gl_ros_driver.git
+$ git clone https://github.com/soslab-project/gl_ros_driver_udp.git
 $ cd $(ROS workspace)
 $ catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 - Set local IP as `10.110.1.3`
+- Run GL-3 publisher node
+```
+$ roslaunch gl_ros_driver_udp gl_ros_driver_udp.launch
+```
 - Run GL-3 publisher node with RViz
 ```
-$ ros2 launch gl_ros2_driver_udp view_gl_ros2_driver_udp.py
+$ roslaunch gl_ros_driver_udp view_gl_ros_driver_udp.launch
 ```
-- Change setting parameters in `gl_ros2_driver_udp/launch/gl_ros2_driver_udp.py`
+- Change setting parameters in `gl_ros_driver_udp/launch/gl_ros_driver_udp.launch`
 
 ## Published Topics
 - _scan_ (sensor_msgs/LaserScan): it publishes scan topic from the laser.
 
 ## Test environment
-- ROS2 Dashing Diademata
-- Ubuntu 18.04 LTS
+- ROS Melodic Morenia, ROS Kinetic Kame
+- Ubuntu 16.04, Ubuntu 18.04
+- x86_64 (PC), aarch64 (Jetson series)
 
 ## Application demo
 - [GL-3, Demo] 2D LiDAR, Mapping (https://youtu.be/AfsqlU_f-Go)
