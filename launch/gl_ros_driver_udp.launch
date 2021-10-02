@@ -6,6 +6,7 @@
         <param name="pc_port" type="int" value="3000"/>
         <param name="frame_id" type="string" value="laser"/>
         <param name="pub_topicname_lidar" type="string" value="scan"/>
+        <param name="angle_offset" type="double" value="0.0"/>
     </node>
 </launch>
 
